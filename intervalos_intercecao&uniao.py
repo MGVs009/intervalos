@@ -1,6 +1,4 @@
 import tkinter as tk
-from PIL import Image, ImageTk
-
 root = tk.Tk()
 root.title("Intervalos")
 root.geometry("960x540")
