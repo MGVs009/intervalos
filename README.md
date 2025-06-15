@@ -1,2 +1,3 @@
-#Dep:
+#Intervalos!!!!
+Dep:
 -tkinter as tk
