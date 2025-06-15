@@ -27,16 +27,11 @@ else:
 
 Intervalo1 = f"{input_II}{a1},{b1}{input_FI}"
 
-
-if FOA_I1 == True and a1 >= 0:
+if FOA_I1 == True:
     a1 += 1
-elif FOA_I1 == True and a1 < 0:
-    a1 -= 1
 
-if FOA_F1 == True and b1 >= 0:
+if FOA_F1 == True:
     b1 -= 1
-elif FOA_F1 == True and b1 < 0:
-    b1 += 1
 
 dic_intervalo = {a1, b1}
 
@@ -64,15 +59,11 @@ else:
 
 Intervalo2 = f"{input_2I}{a2},{b2}{input_F2}"
 
-if FOA_I2 == True and a2 >= 0:
+if FOA_I2 == True:
     a2 += 1
-elif FOA_I2 == True and a2 < 0:
-    a2 -= 1
 
-if FOA_F2 == True and b2 >= 0:
+if FOA_F2 == True:
     b2 -= 1
-elif FOA_F2 == True and b2 < 0:
-    b2 += 1
 
 Todos_Intervalo1 = set()
 Todos_Intervalo2 = set()
@@ -82,9 +73,13 @@ for i1 in range(a1, b1 + 1):
 
 for i2 in range(a2, b2 + 1):
     Todos_Intervalo2.add(i2)
+
 print(Intervalo1)
 print(Intervalo2)
+
 def intercecao():
-    print(Todos_Intervalo1.intersection(Todos_Intervalo2))
+    print(sorted(Todos_Intervalo1.intersection(Todos_Intervalo2)))
+
 def uniao():
-    print(Todos_Intervalo1.union(Todos_Intervalo2))
+    print(sorted(Todos_Intervalo1.union(Todos_Intervalo2)))
+
