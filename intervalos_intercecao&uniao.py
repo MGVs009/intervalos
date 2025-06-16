@@ -1,4 +1,5 @@
 import tkinter as tk
+import math 
 root = tk.Tk()
 root.title("Intervalos")
 root.geometry("960x540")
@@ -106,9 +107,9 @@ def passo():
         print(Intervalo2)
 
         inter = sorted(Todos_Intervalo1.intersection(Todos_Intervalo2))
-        uni = sorted(Todos_Intervalo1.union(Todos_Intervalo2))
+        #Removido porque está a dar erro # uni = sorted(Todos_Intervalo1.union(Todos_Intervalo2))
 
-        resultado = f"{Intervalo1}\n{Intervalo2}\nInterseção: {inter}\nUnião: {uni}"
+        resultado = f"{Intervalo1}\n{Intervalo2}\nInterseção: {inter}" #\nUnião: {uni}
         lbl.config(text=resultado)
 
         return
